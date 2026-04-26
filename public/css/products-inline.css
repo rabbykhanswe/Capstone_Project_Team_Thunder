@@ -1,0 +1,8 @@
+/* Products Page Inline Styles */
+@import url('variables.css');
+
+.products-container p {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}

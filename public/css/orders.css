@@ -1,0 +1,128 @@
+/* ====================================
+   Orders — Oronno Plants
+   ==================================== */
+.orders-page { background: #f9fafb; min-height: calc(100vh - 68px); padding: 2rem 0; }
+.orders-container { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+.page-title { font-size: 1.75rem; font-weight: 900; color: #111827; margin-bottom: 0.25rem; }
+.page-sub   { color: #6b7280; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+/* ---- ORDER CARD ---- */
+.order-card {
+    background: #fff; border-radius: 1rem; border: 1px solid #e5e7eb;
+    margin-bottom: 1rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: box-shadow 0.15s;
+}
+.order-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.order-card-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.5rem; border-bottom: 1px solid #f3f4f6;
+    flex-wrap: wrap; gap: 0.75rem;
+}
+.order-card-meta { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.order-num { font-family: monospace; font-weight: 800; color: #374151; font-size: 0.85rem; }
+.order-date { font-size: 0.8rem; color: #9ca3af; }
+.order-total { font-size: 1rem; font-weight: 800; color: #111827; }
+.order-card-actions { display: flex; align-items: center; gap: 0.75rem; }
+.btn-order-detail {
+    background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0;
+    padding: 0.4rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700;
+    text-decoration: none; transition: background 0.15s;
+}
+.btn-order-detail:hover { background: #dcfce7; }
+.order-card-body { padding: 1rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.order-item-thumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; color: #6b7280; padding: 0.3rem 0.6rem;
+    background: #f9fafb; border-radius: 0.5rem; border: 1px solid #f3f4f6;
+}
+.order-item-thumb i { color: #86efac; }
+
+/* ---- STATUS BADGE ---- */
+.status-badge {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.72rem; font-weight: 700;
+}
+.badge-pending    { background:#fef9c3; color:#854d0e; }
+.badge-processing { background:#dbeafe; color:#1e40af; }
+.badge-shipped    { background:#f3e8ff; color:#6b21a8; }
+.badge-delivered  { background:#dcfce7; color:#166534; }
+.badge-cancelled  { background:#fee2e2; color:#991b1b; }
+
+/* ---- EMPTY STATE ---- */
+.empty-orders { text-align: center; padding: 4rem 2rem; color: #9ca3af; }
+.empty-orders i { font-size: 4rem; display: block; margin-bottom: 1rem; color: #d1d5db; }
+.empty-orders h3 { font-size: 1.25rem; font-weight: 700; color: #374151; margin-bottom: 0.5rem; }
+.empty-orders a { color: #16a34a; font-weight: 700; text-decoration: underline; }
+
+/* ---- ORDER DETAIL ---- */
+.order-detail-grid { display: grid; grid-template-columns: 1fr 320px; gap: 1.5rem; align-items: start; }
+@media (max-width: 768px) { .order-detail-grid { grid-template-columns: 1fr; } }
+
+.detail-card { background: #fff; border-radius: 1rem; border: 1px solid #e5e7eb; overflow: hidden; margin-bottom: 1.5rem; }
+.detail-card-header { padding: 1rem 1.5rem; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 0.5rem; }
+.detail-card-title { font-size: 1rem; font-weight: 700; color: #111827; }
+.detail-card-body  { padding: 1.25rem 1.5rem; }
+
+/* ---- TRACKING TIMELINE ---- */
+.tracking-timeline { position: relative; padding-left: 2rem; }
+.timeline-item { position: relative; padding-bottom: 1.5rem; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+    content: ''; position: absolute; left: -1.625rem; top: 0.4rem;
+    width: 2px; height: 100%; background: #e5e7eb;
+}
+.timeline-item:last-child::before { display: none; }
+.timeline-dot {
+    position: absolute; left: -2rem; top: 0.15rem;
+    width: 14px; height: 14px; border-radius: 50%; border: 2px solid #e5e7eb;
+    background: #fff; z-index: 1;
+}
+.timeline-dot.done   { background: #16a34a; border-color: #16a34a; }
+.timeline-dot.active { background: #f59e0b; border-color: #f59e0b; }
+.timeline-label { font-size: 0.875rem; font-weight: 700; color: #374151; }
+.timeline-time  { font-size: 0.75rem; color: #9ca3af; margin-top: 0.1rem; }
+.timeline-inactive .timeline-label { color: #d1d5db; }
+
+/* ---- ITEMS TABLE ---- */
+.items-table { width: 100%; border-collapse: collapse; }
+.items-table th { text-align: left; padding: 0.6rem 0.75rem; background: #f9fafb; color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid #e5e7eb; }
+.items-table td { padding: 0.875rem 0.75rem; border-bottom: 1px solid #f3f4f6; font-size: 0.875rem; vertical-align: middle; }
+.items-table tr:last-child td { border-bottom: none; }
+.item-plant-img { width: 48px; height: 48px; border-radius: 0.5rem; object-fit: cover; }
+.item-plant-placeholder { width: 48px; height: 48px; border-radius: 0.5rem; background: #f0fdf4; display: flex; align-items: center; justify-content: center; color: #86efac; }
+.item-name { font-weight: 600; color: #111827; }
+.item-sub  { font-size: 0.75rem; color: #9ca3af; }
+
+/* ---- META ROWS ---- */
+.meta-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #f3f4f6; font-size: 0.875rem; }
+.meta-row:last-child { border-bottom: none; }
+.meta-label { color: #6b7280; font-weight: 500; }
+.meta-value { color: #111827; font-weight: 600; text-align: right; }
+.meta-total { font-size: 1rem; font-weight: 900; color: #111827; }
+.meta-total-label { font-weight: 900; }
+
+/* ---- INVOICE ---- */
+@media print {
+    .no-print { display: none !important; }
+    .invoice-page { padding: 0; }
+}
+.invoice-page { background: #fff; }
+.invoice-container { max-width: 720px; margin: 0 auto; padding: 2rem; }
+.invoice-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
+.invoice-logo { font-size: 1.5rem; font-weight: 900; color: #16a34a; }
+.invoice-logo span { color: #111827; }
+.invoice-title { font-size: 2rem; font-weight: 900; color: #111827; text-align: right; }
+.invoice-subtitle { font-size: 0.875rem; color: #6b7280; text-align: right; }
+.invoice-divider { border: none; border-top: 2px solid #16a34a; margin: 1.5rem 0; }
+.invoice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+.invoice-party-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #9ca3af; margin-bottom: 0.5rem; }
+.invoice-party-value { font-size: 0.9rem; color: #111827; line-height: 1.7; }
+.invoice-items-table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+.invoice-items-table th { background: #f0fdf4; padding: 0.75rem; text-align: left; font-size: 0.8rem; font-weight: 700; color: #166534; border-bottom: 2px solid #bbf7d0; }
+.invoice-items-table td { padding: 0.75rem; border-bottom: 1px solid #f3f4f6; font-size: 0.875rem; }
+.invoice-totals { margin-left: auto; width: 280px; }
+.invoice-total-row { display: flex; justify-content: space-between; padding: 0.4rem 0; font-size: 0.875rem; color: #6b7280; }
+.invoice-total-final { display: flex; justify-content: space-between; padding: 0.75rem; background: #f0fdf4; border-radius: 0.5rem; font-weight: 900; font-size: 1rem; color: #16a34a; margin-top: 0.5rem; }
+.invoice-footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e7eb; font-size: 0.8rem; color: #9ca3af; }
+.btn-print { background: #16a34a; color: #fff; border: none; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.875rem; }
+.btn-back-link { color: #16a34a; font-weight: 600; text-decoration: none; font-size: 0.875rem; }

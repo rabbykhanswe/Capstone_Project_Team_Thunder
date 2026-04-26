@@ -1,0 +1,76 @@
+:root {
+    /* Primary Colors - Green Theme */
+    --primary-green: #2ecc71;
+    --primary-green-dark: #27ae60;
+    --primary-green-darker: #229954;
+    --primary-green-light: #58d68d;
+    
+    /* Secondary Colors */
+    --secondary-gray: #6c757d;
+    --secondary-gray-dark: #5a6268;
+    --secondary-gray-light: #f8f9fa;
+    
+    /* Text Colors */
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-white: white;
+    --text-muted: #2c3e50;
+    
+    /* Background Colors */
+    --bg-white: white;
+    --bg-light: #f8f9fa;
+    --bg-lighter: #f9f9f9;
+    --bg-dark: #1e7e34;
+    --bg-darker: #155724;
+    --bg-darkest: #145a28;
+    
+    /* Status Colors */
+    --success-bg: #d4edda;
+    --success-border: #27ae60;
+    --success-text: #155724;
+    
+    --error-bg: #f8d7da;
+    --error-border: #e74c3c;
+    --error-text: #721c24;
+    
+    --warning-bg: #fff3cd;
+    --warning-border: #f39c12;
+    --warning-text: #856404;
+    
+    /* Border Colors */
+    --border-light: #ddd;
+    --border-medium: #ccc;
+    --border-dark: #999;
+    
+    /* Shadow Colors */
+    --shadow-light: rgba(0,0,0,0.1);
+    --shadow-medium: rgba(0,0,0,0.15);
+    --shadow-primary: rgba(46, 204, 113, 0.1);
+    --shadow-primary-hover: rgba(46, 204, 113, 0.3);
+    --shadow-white: rgba(255,255,255,0.7);
+    
+    /* Gradient Colors */
+    --gradient-primary: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+    --gradient-primary-hover: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green-darker));
+    
+    /* Button Colors */
+    --btn-primary-bg: var(--gradient-primary);
+    --btn-primary-hover-bg: var(--gradient-primary-hover);
+    --btn-secondary-bg: var(--secondary-gray);
+    --btn-secondary-hover-bg: var(--secondary-gray-dark);
+    --btn-danger-bg: #e74c3c;
+    --btn-danger-hover-bg: #c0392b;
+    --btn-success-bg: var(--primary-green-dark);
+    --btn-success-hover-bg: var(--primary-green-darker);
+    --btn-warning-bg: #f39c12;
+    --btn-warning-hover-bg: #e67e22;
+    
+    /* Focus Colors */
+    --focus-border: var(--primary-green);
+    --focus-shadow: 0 0 0 3px var(--shadow-primary);
+    
+    /* Transition */
+    --transition-base: all 0.3s ease;
+    --transition-fast: all 0.3s;
+    --transition-slow: all 0.3s ease;
+}

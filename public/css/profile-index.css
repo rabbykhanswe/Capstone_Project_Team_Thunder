@@ -1,0 +1,112 @@
+/* Profile Index Page Styles */
+@import url('variables.css');
+
+.profile-view-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.profile-view-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-card {
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 30px;
+    background-color: var(--bg-lighter);
+}
+
+.profile-picture-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-green);
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.no-profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: var(--text-white);
+    font-size: 48px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.user-info-section {
+    margin-bottom: 25px;
+}
+
+.user-info-section h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    margin: 10px 0;
+}
+
+.info-item strong {
+    color: #555;
+}
+
+.edit-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-edit {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .profile-view-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .profile-card {
+        padding: 20px;
+    }
+    
+    .profile-picture,
+    .no-profile-picture {
+        width: 150px;
+        height: 150px;
+        font-size: 40px;
+    }
+}

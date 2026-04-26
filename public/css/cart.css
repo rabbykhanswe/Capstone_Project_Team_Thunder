@@ -1,0 +1,18 @@
+
+@import url('variables.css');
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
