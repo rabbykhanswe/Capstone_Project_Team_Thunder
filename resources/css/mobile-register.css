@@ -1,0 +1,238 @@
+/* Registration CSS for Oronno Plants Website - Matching Login Theme */
+@import url('../public/css/variables.css');
+
+.firebase-auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    background-color: var(--bg-lighter);
+}
+
+.firebase-auth-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.firebase-auth-title {
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.firebase-auth-subtitle {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.firebase-auth-logo {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.firebase-auth-logo span {
+    color: var(--primary-green);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.phone-prefix {
+    padding: 10px;
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    font-weight: bold;
+    min-width: 60px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: var(--transition-base);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--gradient-primary-hover);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-success {
+    background: var(--btn-success-bg);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: var(--transition-base);
+}
+
+.btn-success:hover:not(:disabled) {
+    background: var(--btn-success-hover-bg);
+}
+
+.btn-secondary {
+    background: var(--btn-secondary-bg);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: var(--transition-base);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--btn-secondary-hover-bg);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error-message, .success-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.error-message {
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+}
+
+.success-message {
+    background-color: var(--success-bg);
+    border: 1px solid var(--success-border);
+    color: var(--success-text);
+}
+
+.error-message.show, .success-message.show {
+    display: block;
+}
+
+.otp-section {
+    display: none;
+}
+
+.otp-section.show {
+    display: block;
+}
+
+.otp-input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-medium);
+    border-radius: 4px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.otp-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.resend-timer {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.resend-timer .timer {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.resend-timer .timer.expired {
+    color: var(--error-text);
+}
+
+.firebase-auth-footer {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-light);
+}
+
+.firebase-auth-footer p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.firebase-auth-footer a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.firebase-auth-footer a:hover {
+    text-decoration: underline;
+}
